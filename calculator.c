@@ -89,7 +89,7 @@ void print_number(GtkWidget *widget, gpointer data) {
 }
 
 void handle_operator(char new_operator) {
-    const char *left_text = gtk_label_get_text(GTK_LABEL(left_label));
+    const char *left_text = gtk_label_get_text(GTK_LABEL(left_label)); // Return first operand after operator
     if (current_operator != '\0' && strlen(current_number) > 0) {
         double num1 = atof(left_text);
         double num2 = atof(current_number);
@@ -188,6 +188,7 @@ void create_button(GtkWidget *grid, const char *label, int value, int row, int c
 void activate(GtkApplication *app, gpointer user_data) {
   GtkWidget *window, *box, *grid, *label_box;
 
+  // Main window
   window = gtk_application_window_new(app);
   gtk_window_set_title(GTK_WINDOW(window), "Calculator");
   gtk_window_set_default_size(GTK_WINDOW(window), 400, 400);
@@ -196,11 +197,12 @@ void activate(GtkApplication *app, gpointer user_data) {
   gtk_widget_set_valign(box, GTK_ALIGN_END);
   gtk_widget_set_vexpand(box, TRUE);
   gtk_window_set_child(GTK_WINDOW(window), box);
-
+ 
   label_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 0);
   gtk_widget_set_hexpand(label_box, TRUE);
   gtk_box_append(GTK_BOX(box), label_box);
 
+  // Holding the operand
   left_label = gtk_label_new(NULL);
   gtk_label_set_markup(GTK_LABEL(left_label), "<span font='24'></span>");
   gtk_label_set_xalign(GTK_LABEL(left_label), 0.0);
