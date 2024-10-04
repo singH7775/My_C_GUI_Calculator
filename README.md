@@ -47,13 +47,18 @@ git clone https://github.com/singH7775/My_C_GUI_Calculator.git
 cd My_C_GUI_Calculator
 
 Build the project:
+
 mkdir build
+
 cd build
+
 cmake -G "MSYS Makefiles" ..
+
 make
 
 Running the Application
 After building, you can run the application from the build directory:
+
 ./Calculator.exe
 
 ---------------------------------------------------------------------------------------------------
@@ -88,9 +93,13 @@ git clone https://github.com/singH7775/My_C_GUI_Calculator.git
 cd My_C_GUI_Calculator
 
 Build the project:
+
 mkdir build
+
 cd build
+
 cmake ..
+
 make
 
 After building, you can run the application from the build directory:
@@ -128,13 +137,18 @@ git clone https://github.com/singH7775/My_C_GUI_Calculator.git
 cd My_C_GUI_Calculator
 
 Build the project:
+
 mkdir build
+
 cd build
+
 cmake ..
+
 make
 
 Running the Application
 After building, you can run the application from the build directory:
+
 ./Calculator
 
 ---------------------------------------------------------------------------------------------------
